@@ -18,16 +18,16 @@ Los Alumnos se inscriben a los diferentes Cursos, los cuales corresponden a una 
 
 Teniendo en cuenta este modelo las funcionalidades a implementar son las siguientes:
 
-Alta, Baja, Modificaciones y Consulta de Usuarios
-Alta, Baja, Modificaciones y Consulta de Alumnos 
-Alta, Baja, Modificaciones y Consulta de Especialidades
-Alta, Baja, Modificaciones y Consulta de Profesores
-Alta, Baja, Modificaciones y Consulta de Planes y Materias
-Alta, Baja, Modificaciones y Consulta de Comisiones
-Alta, Baja, Modificaciones y Consulta de Cursos
-Inscripciones de Alumnos a Cursos
-Registro de Notas
-Reporte de Cursos
-Reporte de Planes
+1. Alta, Baja, Modificaciones y Consulta de Usuarios
+2. Alta, Baja, Modificaciones y Consulta de Alumnos 
+3. Alta, Baja, Modificaciones y Consulta de Especialidades
+4. Alta, Baja, Modificaciones y Consulta de Profesores
+5. Alta, Baja, Modificaciones y Consulta de Planes y Materias
+6. Alta, Baja, Modificaciones y Consulta de Comisiones
+7. Alta, Baja, Modificaciones y Consulta de Cursos
+8. Inscripciones de Alumnos a Cursos
+9. Registro de Notas
+10. Reporte de Cursos
+11. Reporte de Planes
 
 Para poder implementar estas funcionalidades se sugiere utilizar los siguientes Modelo de Objetos y de Datos (el diagrama de Datos fue hecho utilizando SQL Server).
