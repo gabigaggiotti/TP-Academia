@@ -2,7 +2,8 @@
 Trabajo Practico Integrador -Academia NET
 
 ## Integrantes
-49810- Gabriele Gaggiotti
+49810 - Gabriele Gaggiotti
+47433 - Tomás Lardizábal
 
 ## Sistema de Gestión Académica
 
