@@ -1,7 +1,7 @@
 # TP-Academia
 Trabajo Practico Integrador -Academia NET
 
-Sistema de Gestión Académica
+## Sistema de Gestión Académica
 
 
 El Sistema de Gestión Académica (SGA) registra y administra las actividades académicas de la universidad en torno a las entidades principales de Alumnos, Profesores, Materias y Cursos.
