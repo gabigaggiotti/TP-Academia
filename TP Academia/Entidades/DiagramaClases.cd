@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entidades.BusinessEntity">
+    <Position X="10.75" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAABCAEAAA=</HashCode>
+      <FileName>BusinessEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Plan">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAABAAAAAAAEAAAAAEAAAAA=</HashCode>
+      <FileName>Plan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Comision">
+    <Position X="14.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAgAAAAAAAIAAAAAABAAAAAAAEEAAAAAAAAAA=</HashCode>
+      <FileName>Comision.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Especialidad">
+    <Position X="16.25" Y="4.5" Width="1.5" />
+    <InheritanceLine Type="Entidades.BusinessEntity" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.5" Y="3.891" />
+        <Point X="11.5" Y="5.5" />
+        <Point X="16.25" Y="5.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Especialidad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Modulo">
+    <Position X="5.5" Y="4.25" Width="1.5" />
+    <InheritanceLine Type="Entidades.BusinessEntity" FixedToPoint="true">
+      <Path>
+        <Point X="11.5" Y="3.891" />
+        <Point X="11.5" Y="5.5" />
+        <Point X="7" Y="5.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Modulo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Materia">
+    <Position X="5.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAgAAAAAAAABAAAAAAAEEAAAQAAAAwA=</HashCode>
+      <FileName>Materia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Personas">
+    <Position X="7.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAEAACgAAQAEACAAhEAEAAUAAAAAEAAAAgAARAA=</HashCode>
+      <FileName>Personas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.ModuloUsuario">
+    <Position X="9" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAgAAAwAAAAAAACAAAAAQAAEAAAAAAAQABQAEAEAA=</HashCode>
+      <FileName>ModuloUsuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.AlumnoInscripcion">
+    <Position X="10.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAACACAAAAAgAAAAAAAAAAAAAAAABERAAAAA=</HashCode>
+      <FileName>AlumnoInscripcion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Usuario">
+    <Position X="12.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABACAAAAAEAAAAgAAAIAEAABEAAIAAAAAAFAA=</HashCode>
+      <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Curso">
+    <Position X="14.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQIAAIAAIAAAACACAAAAAAABgAAAAAAEAAAAAAAABAA=</HashCode>
+      <FileName>Curso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.DocenteCurso">
+    <Position X="16" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAACAAACAAAAAAAAABAAAAAQAAAIA=</HashCode>
+      <FileName>DocenteCurso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
