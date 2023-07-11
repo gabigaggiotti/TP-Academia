@@ -1,6 +1,9 @@
 # TP-Academia
 Trabajo Practico Integrador -Academia NET
 
+## Integrantes
+49810- Gabriele Gaggiotti
+
 ## Sistema de Gestión Académica
 
 
