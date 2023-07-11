@@ -34,8 +34,7 @@ Para poder implementar estas funcionalidades se sugiere utilizar los siguientes 
 
 ### Modelo de Objetos
 
-
-
+![Modelo de objetos](https://github.com/gabigaggiotti/TP-Academia/blob/7122e6ddc606214bc71560afc7e4b2a76777610d/Imagenes/Modelo%20de%20Objetos.png)
 
 ### Modelo de Datos
 
