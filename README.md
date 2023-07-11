@@ -32,6 +32,6 @@ Teniendo en cuenta este modelo las funcionalidades a implementar son las siguien
 
 Para poder implementar estas funcionalidades se sugiere utilizar los siguientes Modelo de Objetos y de Datos (el diagrama de Datos fue hecho utilizando SQL Server).
 
-### Modelo de Objetos
+### Modelo de Datos
 
 ![Modelo de datos](https://github.com/gabigaggiotti/TP-Academia/blob/6638e46adccc67f810a37d53cd60cffdcf1e16e7/Imagenes/Modelo%20de%20Datos.png)
