@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Net\\TP\\TP Academia\\Entidades\\Entidades.csproj": {}
+    "\\\\wsl.localhost\\Ubuntu\\home\\tomaslardizabal\\tp_academia\\TP-Academia\\TP Academia\\Entidades\\Entidades.csproj": {}
   },
   "projects": {
-    "C:\\Net\\TP\\TP Academia\\Entidades\\Entidades.csproj": {
+    "\\\\wsl.localhost\\Ubuntu\\home\\tomaslardizabal\\tp_academia\\TP-Academia\\TP Academia\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Net\\TP\\TP Academia\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "\\\\wsl.localhost\\Ubuntu\\home\\tomaslardizabal\\tp_academia\\TP-Academia\\TP Academia\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Net\\TP\\TP Academia\\Entidades\\Entidades.csproj",
-        "packagesPath": "C:\\Users\\Gabi\\.nuget\\packages\\",
-        "outputPath": "C:\\Net\\TP\\TP Academia\\Entidades\\obj\\",
+        "projectPath": "\\\\wsl.localhost\\Ubuntu\\home\\tomaslardizabal\\tp_academia\\TP-Academia\\TP Academia\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\potyl\\.nuget\\packages\\",
+        "outputPath": "\\\\wsl.localhost\\Ubuntu\\home\\tomaslardizabal\\tp_academia\\TP-Academia\\TP Academia\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Gabi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\potyl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
