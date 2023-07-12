@@ -1,0 +1,5 @@
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Desktop\obj\Debug\net6.0\Desktop.csproj.AssemblyReference.cache
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Desktop\obj\Debug\net6.0\Desktop.GeneratedMSBuildEditorConfig.editorconfig
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Desktop\obj\Debug\net6.0\Desktop.AssemblyInfoInputs.cache
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Desktop\obj\Debug\net6.0\Desktop.AssemblyInfo.cs
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Desktop\obj\Debug\net6.0\Desktop.csproj.CoreCompileInputs.cache
