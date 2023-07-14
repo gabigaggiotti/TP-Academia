@@ -22,13 +22,27 @@ public class Planes : Plan
         };
     }
 
-    public void agregarPlan(Plan plan)
+    public void agregarPlan()
     {
-        _planes.Add(plan);
+        Planes planes = new Planes();
+        Plan nuevoPlan = new Plan();
+        string idPlan;
+        Console.Write("Descripcion del plan: ");
+        nuevoPlan.Descripcion = Console.ReadLine();
+        Console.Write("ID de especialidad del plan: ");
+        idPlan = Console.ReadLine();
+        Console.Clear();
+        nuevoPlan.IDEspecialidad = int.Parse(idPlan);
+        _planes.Add(nuevoPlan);
+        MostrarPlanes();
     }
 
-    public void eliminarPlan(int _idPlanDelete)
+    public void eliminarPlan()
     {
+        int _idPlanDelete;
+        Console.Clear();
+        Console.WriteLine("Ingrese el ID del plan que quiere eliminar: ");        
+        _idPlanDelete = int.Parse(Console.ReadLine());
         Plan planRemove;
         bool encontrado = false;
         foreach (Plan plan in _planes) 
@@ -43,7 +57,10 @@ public class Planes : Plan
         }
         if (encontrado)
         {
+            Console.WriteLine("------------------------------------------");
             Console.WriteLine("El plan con ID {0} fue eliminado en la lista.", _idPlanDelete);
+            Console.WriteLine("------------------------------------------");
+            MostrarPlanes();
         }
         else
         {
