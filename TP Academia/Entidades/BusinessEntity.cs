@@ -7,7 +7,7 @@
 
         public BusinessEntity()
         {
-            throw new System.NotImplementedException();
+            //throw new System.NotImplementedException();
         }
 
         public int ID
