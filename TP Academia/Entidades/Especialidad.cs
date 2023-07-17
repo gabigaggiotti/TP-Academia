@@ -7,14 +7,11 @@ namespace Entidades
 {
     public class Especialidad : BusinessEntity
     {
-        private int _Descripcion;
-
-        public int Descripcion
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        //private int _IdEspecialidad;
+        //private string _Descripcion;
+        public int IdEspecialidad
+        { get; set; }
+        public string Descripcion
+        { get; set; }
     }
 }

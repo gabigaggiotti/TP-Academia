@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Entidades;
 
 namespace Entidades
 {
@@ -13,7 +12,7 @@ namespace Entidades
         public string? _Descripcion;
         private int _IDEspecialidad;
 
-        public string Descripcion
+        public string? Descripcion
         { get; set; }
 
         public int IDEspecialidad
