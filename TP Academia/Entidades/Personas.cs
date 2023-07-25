@@ -17,76 +17,31 @@ namespace Entidades
         private string _Telefono;
         private int _TipoPersona;
 
-        public string Apellido
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string? Apellido
+        { get; set; }
 
-        public string Direccion
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string? Direccion
+        { get; set; }
 
-        public string Email
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string? Email
+        { get; set; }
 
         public DateTime FechaNacimiento
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        { get; set; }
 
         public int IDPlan
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        { get; set; }
 
         public int Legajo
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        { get; set; }
 
-        public string Nombre
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string? Nombre
+        { get; set; }
 
-        public string Telefono
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string? Telefono
+        { get; set; }
 
         public int TipoPersona
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        { get; set; }
     }
 }

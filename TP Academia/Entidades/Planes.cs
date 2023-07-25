@@ -22,99 +22,32 @@ public class Planes : Plan
         };
     }
     
-    public void agregarPlan()
+    public bool agregarPlan(int idPlan, string desc)
     {
-        //Planes planes = new Planes();
+        bool existe = false;
         Plan nuevoPlan = new Plan();
         Especialidades esp = new Especialidades();
-        int idPlan;
-        Console.Write("Descripcion del plan: ");
-        nuevoPlan.Descripcion = Console.ReadLine();
-        Console.Write("ID de especialidad del plan: ");
-        idPlan = int.Parse(Console.ReadLine());
         if (esp.ExisteEspecialidad(idPlan))
         {
             Console.Clear();
             nuevoPlan.IDEspecialidad = idPlan;
+            nuevoPlan.Descripcion = desc;
             _planes.Add(nuevoPlan);
-            Console.WriteLine("------------------------------------------");
-            Console.WriteLine("El plan con ID {0} fue creado exitosamente.", idPlan);
-            Console.WriteLine("------------------------------------------");
-            MostrarPlanes();
+            existe = true;
         }        
-        else
-        {
-            Console.WriteLine("No existe ninguna especialidad con ID {0}.", idPlan);
-        }
+        return existe;
     }
 
-    public void eliminarPlan()
+    public void eliminarPlan(Plan plan)
     {
-        int _idPlanDelete;
-        Console.Clear();
-        MostrarPlanes();
-        Console.WriteLine("Ingrese el ID del plan que quiere eliminar: ");        
-        _idPlanDelete = int.Parse(Console.ReadLine());
-        Plan planRemove;
-        bool encontrado = false;
-        foreach (Plan plan in _planes) 
-        {
-            if (plan.IDEspecialidad == _idPlanDelete)
-            {
-                encontrado = true;
-                planRemove = plan;
-                _planes.Remove(planRemove);
-                break;
-            }
-        }
-        if (encontrado)
-        {
-            Console.WriteLine("------------------------------------------");
-            Console.WriteLine("El plan con ID {0} fue eliminado en la lista.", _idPlanDelete);
-            Console.WriteLine("------------------------------------------");
-            MostrarPlanes();
-        }
-        else
-        {
-            Console.WriteLine("El plan con ID {0} no se encontró en la lista.", _idPlanDelete);
-        }
+        _planes.Remove(plan);        
     }
 
-    public void modificarPlan(Plan plan)
+    public void modificarPlan(Plan plan, int idNuevo, string descNueva)
     {       
         {
-            int idPlan, idNuevo;
-            MostrarPlanes();
-            Console.Write("ID del plan a modificar: ");
-            idPlan = int.Parse(Console.ReadLine());
-            bool encontrado = false;
-            foreach (Plan p in _planes)
-            {
-                if (p.IDEspecialidad == idPlan)
-                {
-                    encontrado = true;
-                    Console.Write("Nuevo ID: ");
-                    idNuevo = int.Parse(Console.ReadLine());
-                    p.IDEspecialidad = idNuevo;
-                    string descNueva;
-                    Console.Write("Nueva descripcion: ");
-                    descNueva = Console.ReadLine();
-                    p.Descripcion = descNueva;
-                    Console.Clear();
-                    break;
-                }
-            }
-            if (encontrado)
-            {
-                Console.WriteLine("------------------------------------------");
-                Console.WriteLine("El plan fue modificado.", plan.IDEspecialidad);
-                Console.WriteLine("------------------------------------------");
-                MostrarPlanes();
-            }
-            else
-            {
-                Console.WriteLine("El plan no se encontró en la lista.");
-            }
+            plan.IDEspecialidad = idNuevo;
+            plan.Descripcion = descNueva;
         }
     }
 
@@ -126,6 +59,19 @@ public class Planes : Plan
             Console.WriteLine("ID Especialidad: " + p.IDEspecialidad);
             Console.WriteLine("--------------------------");      
         }
+    }
+    public Plan? getPlanes(int id)
+    {
+        Plan plan = null;
+        bool existe = false;
+        foreach (Plan p in _planes)
+        {
+            if (p.IDEspecialidad == id)
+            {
+                plan = p;
+            }
+        }
+        return plan;
     }
 }
 

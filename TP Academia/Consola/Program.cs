@@ -1,6 +1,6 @@
-﻿using System.Numerics;
-using System;
-using Entidades;
+﻿using Entidades;
+using System.Numerics;
+
 class Program
 {
 
@@ -10,7 +10,7 @@ class Program
         Plan nuevoPlan = new Plan();
         Especialidades especialidades = new Especialidades();
         Especialidad especialidad = new Especialidad();
-        
+
         bool salir = false;
         while (!salir)
         {
@@ -30,7 +30,80 @@ class Program
 
             string opcion = Console.ReadLine();
 
-            switch (opcion)
+            if (opcion == "1") //ALTA DE UN PLAN
+            {
+                Console.Clear();
+                int idPlan;
+                bool planCreado;
+                string desc;
+                Console.Write("Descripcion del plan: ");
+                desc = Console.ReadLine();
+                Console.Write("ID de especialidad del plan: ");
+                idPlan = int.Parse(Console.ReadLine());
+                planCreado = planes.agregarPlan(idPlan, desc);
+                if (planCreado)
+                {
+                    Console.WriteLine("------------------------------------------");
+                    Console.WriteLine("El plan con ID {0} fue creado exitosamente.", idPlan);
+                    Console.WriteLine("------------------------------------------");
+                    planes.MostrarPlanes();
+                }
+                else Console.WriteLine("Los datos del plan son invalidos.");
+
+            }
+            if (opcion == "2") //BAJA DE UN PLAN
+            {
+                Console.Clear();
+                int idPlan;
+                Plan plan;
+                planes.MostrarPlanes();
+                Console.Write("Ingrese el ID del plan que quiere eliminar: ");
+                idPlan = int.Parse(Console.ReadLine());
+                plan = planes.getPlanes(idPlan);
+                if (plan != null) 
+                {
+                    planes.eliminarPlan(plan);
+                    Console.WriteLine("------------------------------------------");
+                    Console.WriteLine("El plan con ID {0} fue eliminado en la lista.", idPlan);
+                    Console.WriteLine("------------------------------------------");
+                    Thread.Sleep(3000);
+                    Console.Clear();
+                    planes.MostrarPlanes();
+                }
+                else
+                {
+                    Console.WriteLine("------------------------------------------");
+                    Console.WriteLine("El plan con ID {0} no existe en la lista.", idPlan);
+                    Console.WriteLine("------------------------------------------");
+                }                
+            }
+            if (opcion == "3") //MODIFICAR PLAN
+            {
+                Console.Clear();
+                int idPlan, idNuevo;
+                Plan plan;
+                bool existe;
+                planes.MostrarPlanes();
+                Console.Write("ID del plan a modificar: ");
+                idPlan = int.Parse(Console.ReadLine());
+                plan = planes.getPlanes(idPlan);
+                if (plan != null) 
+                {
+                    Console.Write("Nuevo ID: ");
+                    idNuevo = int.Parse(Console.ReadLine());
+                    string descNueva;
+                    Console.Write("Nueva descripcion: ");
+                    descNueva = Console.ReadLine();
+                    planes.modificarPlan(plan, idNuevo, descNueva);
+                    Console.Clear();
+                    Console.WriteLine("------------------------------------------");
+                    Console.WriteLine("El plan fue modificado.");
+                    Console.WriteLine("------------------------------------------");                    
+                    planes.MostrarPlanes();
+                }
+                else Console.WriteLine("El plan no se encontró en la lista.");
+            }
+            /*switch (opcion)
             {
                 case "1":
                     Console.Clear();
@@ -78,7 +151,7 @@ class Program
                 default:
                     Console.WriteLine("Opción inválida. Por favor, seleccione una opción válida.");
                     break;
-            }
+            }*/
             Console.ReadKey();
         }
     }
