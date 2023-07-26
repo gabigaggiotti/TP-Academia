@@ -29,7 +29,6 @@ public class Planes : Plan
         Especialidades esp = new Especialidades();
         if (esp.ExisteEspecialidad(idPlan))
         {
-            Console.Clear();
             nuevoPlan.IDEspecialidad = idPlan;
             nuevoPlan.Descripcion = desc;
             _planes.Add(nuevoPlan);
@@ -50,26 +49,18 @@ public class Planes : Plan
             plan.Descripcion = descNueva;
         }
     }
-
-   public void MostrarPlanes()
+   public List<Plan> obtenerPlanes()
     {
-        foreach (var p in _planes)
-        {
-            Console.WriteLine("Descripción: " + p.Descripcion);
-            Console.WriteLine("ID Especialidad: " + p.IDEspecialidad);
-            Console.WriteLine("--------------------------");      
-        }
+        List<Plan> listaPlanes = new List<Plan>();
+        listaPlanes = _planes;
+        return listaPlanes;        
     }
-    public Plan? getPlanes(int id)
+    public Plan? obtenerPlan(int id)
     {
         Plan plan = null;
-        bool existe = false;
         foreach (Plan p in _planes)
         {
-            if (p.IDEspecialidad == id)
-            {
-                plan = p;
-            }
+            if (p.IDEspecialidad == id) plan = p;
         }
         return plan;
     }
