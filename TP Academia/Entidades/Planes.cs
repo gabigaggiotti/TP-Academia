@@ -10,30 +10,35 @@ using Entidades;
 public class Planes : Plan
 {
     public List<Plan> _planes;
-    public List<Especialidad> esp;
+    //public List<Especialidad> esp;
 
     public Planes()
     {
         _planes = new List<Plan>
         {
-            new Plan{ Descripcion = "Plan 1995", IDEspecialidad = 1 },
-            new Plan{ Descripcion = "Plan 2008", IDEspecialidad = 2 },
-            new Plan{ Descripcion = "Plan 2023", IDEspecialidad = 3 }
+            //new Plan{ Descripcion = "Plan 1995", IDEspecialidad = 1 },
+            //new Plan{ Descripcion = "Plan 2008", IDEspecialidad = 2 },
+            //new Plan{ Descripcion = "Plan 2023", IDEspecialidad = 3 }
         };
     }
+    public int indiceId = 0;
     
-    public bool agregarPlan(int idPlan, string desc)
+    public bool agregarPlan(int idEsp, string desc, Especialidades esp)
     {
-        bool existe = false;
+        bool existe = true;
         Plan nuevoPlan = new Plan();
-        Especialidades esp = new Especialidades();
-        if (esp.ExisteEspecialidad(idPlan))
+        Especialidad? eAP;
+        eAP = esp.obtenerEspecialidad(idEsp);
+        if (eAP != null)
         {
-            nuevoPlan.IDEspecialidad = idPlan;
+            indiceId = _planes.Count + 1;            
+            nuevoPlan.IdPlan = indiceId;
+            nuevoPlan.IDEspecialidad = idEsp;
             nuevoPlan.Descripcion = desc;
             _planes.Add(nuevoPlan);
             existe = true;
-        }        
+        }
+        else existe = false;        
         return existe;
     }
 
@@ -42,25 +47,34 @@ public class Planes : Plan
         _planes.Remove(plan);        
     }
 
-    public void modificarPlan(Plan plan, int idNuevo, string descNueva)
+    public bool modificarPlan(Plan plan, int idEsp, string descNueva, Especialidades esp)
     {       
         {
-            plan.IDEspecialidad = idNuevo;
-            plan.Descripcion = descNueva;
+            bool modificado = false;
+            Especialidad? eMP;
+            eMP = esp.obtenerEspecialidad(idEsp);
+            if (eMP != null)
+            {
+                plan.IDEspecialidad = idEsp;
+                plan.Descripcion = descNueva;
+                modificado = true;
+            }
+            return modificado;
+            
         }
     }
    public List<Plan> obtenerPlanes()
     {
         List<Plan> listaPlanes = new List<Plan>();
         listaPlanes = _planes;
-        return listaPlanes;        
+        return listaPlanes;
     }
     public Plan? obtenerPlan(int id)
     {
-        Plan plan = null;
+        Plan? plan = null;
         foreach (Plan p in _planes)
         {
-            if (p.IDEspecialidad == id) plan = p;
+            if (p.IdPlan == id) plan = p;
         }
         return plan;
     }

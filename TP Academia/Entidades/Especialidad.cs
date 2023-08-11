@@ -7,10 +7,9 @@ namespace Entidades
 {
     public class Especialidad : BusinessEntity
     {
-        //private int _IdEspecialidad;
-        //private string _Descripcion;
+        private static int contador = 0;
         public int IdEspecialidad
-        { get; set; }
+        { get;  set; }
         public string Descripcion
         { get; set; }
     }

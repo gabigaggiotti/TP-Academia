@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AcademiaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="alumnos_inscripciones">
+    <Key>
+      <PropertyRef Name="id_inscripcion" />
+    </Key>
+    <Property Name="id_inscripcion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_alumno" Type="int" Nullable="false" />
+    <Property Name="id_curso" Type="int" Nullable="false" />
+    <Property Name="condicion" Type="varchar" MaxLength="50" />
+    <Property Name="nota" Type="int" />
+  </EntityType>
+  <EntityType Name="comisiones">
+    <Key>
+      <PropertyRef Name="id_comision" />
+    </Key>
+    <Property Name="id_comision" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="desc_comision" Type="varchar" MaxLength="50" />
+    <Property Name="id_especialidad" Type="int" Nullable="false" />
+    <Property Name="id_plan" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cursos">
+    <Key>
+      <PropertyRef Name="id_cusrso" />
+    </Key>
+    <Property Name="id_cusrso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_materia" Type="int" Nullable="false" />
+    <Property Name="id_comision" Type="int" Nullable="false" />
+    <Property Name="anio_calendario" Type="int" Nullable="false" />
+    <Property Name="cupo" Type="int" />
+  </EntityType>
+  <EntityType Name="docentes_cursos">
+    <Key>
+      <PropertyRef Name="id_dictado" />
+    </Key>
+    <Property Name="id_dictado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="desc_materia" Type="varchar" MaxLength="50" />
+    <Property Name="id_curso" Type="int" Nullable="false" />
+    <Property Name="id_docente" Type="int" Nullable="false" />
+    <Property Name="cargo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="especialidades">
+    <Key>
+      <PropertyRef Name="idEspecialidad" />
+    </Key>
+    <Property Name="idEspecialidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descEspecialidad" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="materias">
+    <Key>
+      <PropertyRef Name="id_materia" />
+    </Key>
+    <Property Name="id_materia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="desc_materia" Type="varchar" MaxLength="50" />
+    <Property Name="hs_semanales" Type="int" />
+    <Property Name="hs_totales" Type="int" />
+    <Property Name="id_plan" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="modulos">
+    <Key>
+      <PropertyRef Name="id_modulo" />
+    </Key>
+    <Property Name="id_modulo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="desc_modulo" Type="varchar" MaxLength="50" />
+    <Property Name="ejecuta" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="modulos_usuarios">
+    <Key>
+      <PropertyRef Name="id_modulo_usuario" />
+    </Key>
+    <Property Name="id_modulo_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_modulo" Type="int" Nullable="false" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+    <Property Name="alta" Type="bit" />
+    <Property Name="baja" Type="bit" />
+    <Property Name="consulta" Type="bit" />
+    <Property Name="modificacion" Type="bit" />
+  </EntityType>
+  <EntityType Name="personas">
+    <Key>
+      <PropertyRef Name="id_persona" />
+    </Key>
+    <Property Name="id_persona" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellido" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="telefono" Type="varchar" MaxLength="50" />
+    <Property Name="fec_nac" Type="datetime" Nullable="false" />
+    <Property Name="legajo" Type="int" Nullable="false" />
+    <Property Name="tipo_persona" Type="int" Nullable="false" />
+    <Property Name="id_plan" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="planes">
+    <Key>
+      <PropertyRef Name="id_plan" />
+    </Key>
+    <Property Name="id_plan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="desc_plan" Type="varchar" MaxLength="50" />
+    <Property Name="id_especialidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_usuario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="clave" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="habilitado" Type="bit" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellido" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="cambia_clave" Type="bit" />
+    <Property Name="id_persona" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_planes_especialidades">
+    <End Role="especialidades" Type="Self.especialidades" Multiplicity="1" />
+    <End Role="planes" Type="Self.planes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="especialidades">
+        <PropertyRef Name="idEspecialidad" />
+      </Principal>
+      <Dependent Role="planes">
+        <PropertyRef Name="id_especialidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AcademiaModelStoreContainer">
+    <EntitySet Name="alumnos_inscripciones" EntityType="Self.alumnos_inscripciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="comisiones" EntityType="Self.comisiones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cursos" EntityType="Self.cursos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="docentes_cursos" EntityType="Self.docentes_cursos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="especialidades" EntityType="Self.especialidades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="materias" EntityType="Self.materias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="modulos" EntityType="Self.modulos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="modulos_usuarios" EntityType="Self.modulos_usuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="personas" EntityType="Self.personas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="planes" EntityType="Self.planes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_planes_especialidades" Association="Self.FK_planes_especialidades">
+      <End Role="especialidades" EntitySet="especialidades" />
+      <End Role="planes" EntitySet="planes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

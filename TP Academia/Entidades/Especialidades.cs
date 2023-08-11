@@ -10,21 +10,25 @@ public class Especialidades : Especialidad
     public List<Especialidad> _especialidades;
 
     public Especialidades()
-    {        
+    {
         _especialidades = new List<Especialidad>
             {
-                new Especialidad{ IdEspecialidad = 1, Descripcion = "Ingenieria en Sistemas"},
-                new Especialidad{ IdEspecialidad = 2, Descripcion = "Ingenieria Mecanica"},
-                new Especialidad{ IdEspecialidad = 3, Descripcion = "Ingenieria Civil"},
-                new Especialidad{ IdEspecialidad = 4, Descripcion = "Analista de sistemas"}
+                //new Especialidad{ IdEspecialidad = 1 ,Descripcion = "Ingenieria en Sistemas"},
+                //new Especialidad{ Descripcion = "Ingenieria Mecanica"},
+                //new Especialidad{ Descripcion = "Ingenieria Civil"},
+                //new Especialidad{ Descripcion = "Analista de sistemas"}
             };
     }
-    public Especialidad? obtenerEspecialidad(int id)
+    public int ultimoIndice = 0;
+    public Especialidad? obtenerEspecialidad(int idEsp)
     {
-        Especialidad esp = null;
+        Especialidad? esp = null;
         foreach (Especialidad e in _especialidades)
         {
-            if (e.IdEspecialidad == id) esp = e;
+            if (e.IdEspecialidad == idEsp)
+            {
+                esp = e;
+            }else esp = null;
         }
         return esp;
     }
@@ -34,34 +38,31 @@ public class Especialidades : Especialidad
         listaEsp = _especialidades;
         return listaEsp;
     }
-    public bool agregarEspecialidad(int id, string desc)
+    public void agregarEspecialidad(string desc)
     {
-        bool existe = true;
-        Especialidades especialidades = new Especialidades();
+        ultimoIndice = _especialidades.Count + 1;
         Especialidad nuevaEsp = new Especialidad();
-        nuevaEsp.IdEspecialidad = id;
+        nuevaEsp.IdEspecialidad = ultimoIndice;
         nuevaEsp.Descripcion = desc;
         _especialidades.Add(nuevaEsp);
-        return existe;
     }
     public void eliminarEspecialidad(Especialidad esp)
     {
         _especialidades.Remove(esp);
     }
-    public void modificarEspecialidad(int idEsp, int idNuevo, string descNueva)
+    public void modificarEspecialidad(int idEsp, string descNueva)
     {
         foreach (Especialidad e in _especialidades)
         {
             if (e.IdEspecialidad == idEsp)
             {
-                e.IdEspecialidad = idNuevo;
                 e.Descripcion = descNueva;      
             }
         }        
     }
     public bool ExisteEspecialidad(int idEsp)
     {
-        bool existe = false;
+        bool existe = false; 
         foreach (Especialidad esp in _especialidades)
         {
             if (esp.IdEspecialidad == idEsp)
@@ -70,8 +71,6 @@ public class Especialidades : Especialidad
                 break;
             }
         }
-        if (existe) return true;
-        else return false;
+        return existe;
     }
-    
 }

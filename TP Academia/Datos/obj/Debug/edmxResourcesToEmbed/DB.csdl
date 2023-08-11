@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AcademiaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="alumnos_inscripciones">
+    <Key>
+      <PropertyRef Name="id_inscripcion" />
+    </Key>
+    <Property Name="id_inscripcion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_alumno" Type="Int32" Nullable="false" />
+    <Property Name="id_curso" Type="Int32" Nullable="false" />
+    <Property Name="condicion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nota" Type="Int32" />
+  </EntityType>
+  <EntityType Name="comisiones">
+    <Key>
+      <PropertyRef Name="id_comision" />
+    </Key>
+    <Property Name="id_comision" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="desc_comision" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_especialidad" Type="Int32" Nullable="false" />
+    <Property Name="id_plan" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cursos">
+    <Key>
+      <PropertyRef Name="id_cusrso" />
+    </Key>
+    <Property Name="id_cusrso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_materia" Type="Int32" Nullable="false" />
+    <Property Name="id_comision" Type="Int32" Nullable="false" />
+    <Property Name="anio_calendario" Type="Int32" Nullable="false" />
+    <Property Name="cupo" Type="Int32" />
+  </EntityType>
+  <EntityType Name="docentes_cursos">
+    <Key>
+      <PropertyRef Name="id_dictado" />
+    </Key>
+    <Property Name="id_dictado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="desc_materia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_curso" Type="Int32" Nullable="false" />
+    <Property Name="id_docente" Type="Int32" Nullable="false" />
+    <Property Name="cargo" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="especialidades">
+    <Key>
+      <PropertyRef Name="idEspecialidad" />
+    </Key>
+    <Property Name="idEspecialidad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descEspecialidad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="planes" Relationship="Self.FK_planes_especialidades" FromRole="especialidades" ToRole="planes" />
+  </EntityType>
+  <EntityType Name="materias">
+    <Key>
+      <PropertyRef Name="id_materia" />
+    </Key>
+    <Property Name="id_materia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="desc_materia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hs_semanales" Type="Int32" />
+    <Property Name="hs_totales" Type="Int32" />
+    <Property Name="id_plan" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="modulos">
+    <Key>
+      <PropertyRef Name="id_modulo" />
+    </Key>
+    <Property Name="id_modulo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="desc_modulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ejecuta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="modulos_usuarios">
+    <Key>
+      <PropertyRef Name="id_modulo_usuario" />
+    </Key>
+    <Property Name="id_modulo_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_modulo" Type="Int32" Nullable="false" />
+    <Property Name="id_usuario" Type="Int32" Nullable="false" />
+    <Property Name="alta" Type="Boolean" />
+    <Property Name="baja" Type="Boolean" />
+    <Property Name="consulta" Type="Boolean" />
+    <Property Name="modificacion" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="personas">
+    <Key>
+      <PropertyRef Name="id_persona" />
+    </Key>
+    <Property Name="id_persona" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fec_nac" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="legajo" Type="Int32" Nullable="false" />
+    <Property Name="tipo_persona" Type="Int32" Nullable="false" />
+    <Property Name="id_plan" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="planes">
+    <Key>
+      <PropertyRef Name="id_plan" />
+    </Key>
+    <Property Name="id_plan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="desc_plan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_especialidad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="especialidades" Relationship="Self.FK_planes_especialidades" FromRole="planes" ToRole="especialidades" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre_usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="clave" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="habilitado" Type="Boolean" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cambia_clave" Type="Boolean" />
+    <Property Name="id_persona" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_planes_especialidades">
+    <End Role="especialidades" Type="Self.especialidades" Multiplicity="1" />
+    <End Role="planes" Type="Self.planes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="especialidades">
+        <PropertyRef Name="idEspecialidad" />
+      </Principal>
+      <Dependent Role="planes">
+        <PropertyRef Name="id_especialidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AcademiaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="alumnos_inscripciones" EntityType="Self.alumnos_inscripciones" />
+    <EntitySet Name="comisiones" EntityType="Self.comisiones" />
+    <EntitySet Name="cursos" EntityType="Self.cursos" />
+    <EntitySet Name="docentes_cursos" EntityType="Self.docentes_cursos" />
+    <EntitySet Name="especialidades" EntityType="Self.especialidades" />
+    <EntitySet Name="materias" EntityType="Self.materias" />
+    <EntitySet Name="modulos" EntityType="Self.modulos" />
+    <EntitySet Name="modulos_usuarios" EntityType="Self.modulos_usuarios" />
+    <EntitySet Name="personas" EntityType="Self.personas" />
+    <EntitySet Name="planes" EntityType="Self.planes" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" />
+    <AssociationSet Name="FK_planes_especialidades" Association="Self.FK_planes_especialidades">
+      <End Role="especialidades" EntitySet="especialidades" />
+      <End Role="planes" EntitySet="planes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

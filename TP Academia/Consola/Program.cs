@@ -9,8 +9,7 @@ class Program
         Planes planes = new Planes();
         Plan nuevoPlan = new Plan();
         Especialidades especialidades = new Especialidades();
-        Especialidad especialidad = new Especialidad();
-
+        Especialidad especialidad = new Especialidad();       
         bool salir = false;
         while (!salir)
         {
@@ -34,30 +33,32 @@ class Program
             if (opcion == "1")
             {
                 Console.Clear();
-                int idPlan;
+                int idEsp;
                 bool planCreado;
                 string desc;
                 Console.Write("Descripcion del plan: ");
                 desc = Console.ReadLine();
                 Console.Write("ID de especialidad del plan: ");
-                idPlan = int.Parse(Console.ReadLine());
-                planCreado = planes.agregarPlan(idPlan, desc);
-                if (planCreado)
+                idEsp = int.Parse(Console.ReadLine());
+                if (planes.agregarPlan(idEsp, desc, especialidades))
                 {
                     Console.Clear();
-                    Console.WriteLine("------------------------------------------");
-                    Console.WriteLine("El plan con ID {0} fue creado exitosamente.", idPlan);
-                    Console.WriteLine("------------------------------------------");
                     foreach (Plan plan in planes.obtenerPlanes())
                     {
-                        Console.WriteLine("Descripción: " + plan.Descripcion);
+                        Console.WriteLine("ID plan: " + plan.IdPlan);
                         Console.WriteLine("ID Especialidad: " + plan.IDEspecialidad);
+                        Console.WriteLine("Descripción: " + plan.Descripcion);
                         Console.WriteLine("--------------------------");
                     }
                     Console.WriteLine("Presione una tecla para continuar.");
                     Console.ReadKey();
                 }
-                else Console.WriteLine("Los datos del plan son invalidos.");
+                else
+                {
+                    Console.WriteLine("Los datos son invalidos.");
+                    Thread.Sleep(3000);
+                    Console.Clear();
+                }
 
             }
             //BAJA DE UN PLAN
@@ -68,8 +69,9 @@ class Program
                 Plan plan;
                 foreach (Plan p in planes.obtenerPlanes())
                 {
-                    Console.WriteLine("Descripción: " + p.Descripcion);
+                    Console.WriteLine("ID plan: " + p.IdPlan);
                     Console.WriteLine("ID Especialidad: " + p.IDEspecialidad);
+                    Console.WriteLine("Descripción: " + p.Descripcion);
                     Console.WriteLine("--------------------------");
                 }
                 Console.Write("Ingrese el ID del plan que quiere eliminar: ");
@@ -86,8 +88,9 @@ class Program
                     Console.WriteLine("Lista actualizada de los planes:\n------------------------------------------");
                     foreach (Plan p in planes.obtenerPlanes())
                     {
-                        Console.WriteLine("Descripción: " + p.Descripcion);
+                        Console.WriteLine("ID plan: " + p.IdPlan);
                         Console.WriteLine("ID Especialidad: " + p.IDEspecialidad);
+                        Console.WriteLine("Descripción: " + p.Descripcion);
                         Console.WriteLine("--------------------------");
                     }
                     Console.WriteLine("Presione una tecla para continuar.");
@@ -106,36 +109,51 @@ class Program
             if (opcion == "3") 
             {
                 Console.Clear();
-                int idPlan, idNuevo;
+                int idPlan, idEsp;
                 Plan plan;
-                bool existe;
+                bool modificado;
                 foreach (Plan p in planes.obtenerPlanes())
                 {
-                    Console.WriteLine("Descripción: " + p.Descripcion);
+                    Console.WriteLine("ID plan: " + p.IdPlan);
                     Console.WriteLine("ID Especialidad: " + p.IDEspecialidad);
+                    Console.WriteLine("Descripción: " + p.Descripcion);
                     Console.WriteLine("--------------------------");
                 }
                 Console.Write("ID del plan a modificar: ");
                 idPlan = int.Parse(Console.ReadLine());
                 plan = planes.obtenerPlan(idPlan);
+                Console.WriteLine(Convert.ToString(plan.IdPlan), plan.Descripcion);
+                Console.ReadKey();
                 if (plan != null) 
                 {
-                    Console.Write("Nuevo ID: ");
-                    idNuevo = int.Parse(Console.ReadLine());
+                    Console.Write("Nuevo ID de especialidad: ");
+                    idEsp = int.Parse(Console.ReadLine());
                     string descNueva;
                     Console.Write("Nueva descripcion: ");
                     descNueva = Console.ReadLine();
-                    planes.modificarPlan(plan, idNuevo, descNueva);
+                    modificado = planes.modificarPlan(plan, idEsp, descNueva, especialidades);
                     Console.Clear();
-                    Console.WriteLine("------------------------------------------");
-                    Console.WriteLine("El plan fue modificado.");
-                    Console.WriteLine("------------------------------------------");
-                    foreach (Plan p in planes.obtenerPlanes())
+                    if (modificado)
                     {
-                        Console.WriteLine("Descripción: " + p.Descripcion);
-                        Console.WriteLine("ID Especialidad: " + p.IDEspecialidad);
-                        Console.WriteLine("--------------------------");
+                        Console.WriteLine("------------------------------------------");
+                        Console.WriteLine("El plan fue modificado.");
+                        Console.WriteLine("------------------------------------------");
+                        Thread.Sleep(3000);
+                        Console.Clear();
+                        foreach (Plan p in planes.obtenerPlanes())
+                        {
+                            Console.WriteLine("ID plan: " + plan.IdPlan);
+                            Console.WriteLine("ID Especialidad: " + plan.IDEspecialidad);
+                            Console.WriteLine("Descripción: " + plan.Descripcion);
+                            Console.WriteLine("--------------------------");
+                        }
                     }
+                    else
+                    {
+                        Console.WriteLine("Los datos son invalidos.");
+                        Thread.Sleep(3000);
+                        Console.Clear();
+                    }                  
                 }
                 else Console.WriteLine("El plan no se encontró en la lista.");
             }
@@ -145,8 +163,9 @@ class Program
                 Console.Clear();
                 foreach (Plan p in planes.obtenerPlanes())
                 {
-                    Console.WriteLine("Descripción: " + p.Descripcion);
+                    Console.WriteLine("ID plan: " + p.IdPlan);
                     Console.WriteLine("ID Especialidad: " + p.IDEspecialidad);
+                    Console.WriteLine("Descripción: " + p.Descripcion);
                     Console.WriteLine("--------------------------");
                 }
                 Console.WriteLine("Presione una tecla para continuar.");
@@ -155,32 +174,24 @@ class Program
             }
             //ALTA DE UNA ESPECIALIDAD
             if (opcion == "5")
-            {
-                int idEsp;
-                string descEsp;
-                bool espCreada;
-                Console.Write("ID de la especialidad: ");
-                idEsp = int.Parse(Console.ReadLine());
-                Console.Write("Descripcion de la especialidad: ");
-                descEsp = Console.ReadLine();
-                espCreada = especialidades.agregarEspecialidad(idEsp, descEsp);
-                if (espCreada)
-                {
-                    Console.Clear();
-                    Console.WriteLine("------------------------------------------");
-                    Console.WriteLine("La especialidad con ID {0} fue creada exitosamente.", idEsp);
-                    Console.WriteLine("------------------------------------------");
-                    foreach (Especialidad esp in especialidades.obtenerEspecialidades())
-                    {
-                        Console.WriteLine("ID Especialidad: " + esp.IdEspecialidad);
-                        Console.WriteLine("Descripción: " + esp.Descripcion);
-                        Console.WriteLine("--------------------------");
-                    }
-                    Console.WriteLine("Presione una tecla para continuar.");
-                    Console.ReadKey();
-                }
-                else Console.WriteLine("Los datos de la especialidad son invalidos.");
+            {   
+            string descEsp;
                 Console.Clear();
+            Console.Write("Descripcion de la especialidad: ");
+            descEsp = Console.ReadLine();
+            especialidades.agregarEspecialidad(descEsp);
+            Console.Clear();
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine("La especialidad {0} fue creada exitosamente.", descEsp);
+            Console.WriteLine("------------------------------------------");
+            foreach (Especialidad esp in especialidades.obtenerEspecialidades())
+            {
+                Console.WriteLine("ID Especialidad: " + esp.IdEspecialidad);
+                Console.WriteLine("Descripción: " + esp.Descripcion);
+                Console.WriteLine("--------------------------");
+            }
+            Console.WriteLine("Presione una tecla para continuar.");
+            Console.ReadKey();
             }
             //BAJA DE UNA ESPECIALIDAD
             if (opcion == "6")
@@ -227,7 +238,7 @@ class Program
             //MODIFICAR ESPECIALIDAD
             if (opcion == "7")
             {
-                int idEsp, idNuevo;
+                int idEsp;
                 string descNueva;
                 Console.Clear();
                 foreach (Especialidad esp in especialidades.obtenerEspecialidades())
@@ -237,17 +248,13 @@ class Program
                     Console.WriteLine("--------------------------");
                 }
                 Console.Write("ID de la especialidad a modificar: ");
-                idEsp = int.Parse(Console.ReadLine());
-                bool encontrado = false;
-                encontrado = especialidades.ExisteEspecialidad(idEsp);
-                if (encontrado == false) Console.WriteLine("La especialidad no se encontró en la lista.");
-                if (encontrado)
+                idEsp = int.Parse(Console.ReadLine());                
+                if (especialidades.ExisteEspecialidad(idEsp) == false) Console.WriteLine("La especialidad no se encontró en la lista.");
+                if (especialidades.ExisteEspecialidad(idEsp))
                 {
-                    Console.Write("Nuevo ID: ");
-                    idNuevo = int.Parse(Console.ReadLine());
                     Console.Write("Nueva descripcion: ");
                     descNueva = Console.ReadLine();
-                    especialidades.modificarEspecialidad(idEsp, idNuevo, descNueva);
+                    especialidades.modificarEspecialidad(idEsp, descNueva);
                     Console.Clear();
                     Console.WriteLine("------------------------------------------");
                     Console.WriteLine("La especialidad fue modificada.", especialidad.IdEspecialidad);

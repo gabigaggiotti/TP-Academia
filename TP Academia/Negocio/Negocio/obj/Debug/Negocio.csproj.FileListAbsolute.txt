@@ -1,0 +1,15 @@
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\bin\Debug\Negocio.dll.config
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\bin\Debug\Negocio.dll
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\bin\Debug\Negocio.pdb
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\bin\Debug\Datos.dll
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\bin\Debug\EntityFramework.dll
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\bin\Debug\EntityFramework.SqlServer.dll
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\bin\Debug\Datos.pdb
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\bin\Debug\Datos.dll.config
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\bin\Debug\EntityFramework.xml
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\bin\Debug\EntityFramework.SqlServer.xml
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\obj\Debug\Negocio.dll
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\obj\Debug\Negocio.pdb

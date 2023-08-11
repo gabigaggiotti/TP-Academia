@@ -1,0 +1,12 @@
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Datos\bin\Debug\Datos.dll.config
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Datos\bin\Debug\Datos.dll
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Datos\bin\Debug\Datos.pdb
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Datos\bin\Debug\EntityFramework.dll
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Datos\bin\Debug\EntityFramework.SqlServer.dll
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Datos\bin\Debug\EntityFramework.xml
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Datos\bin\Debug\EntityFramework.SqlServer.xml
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Datos\obj\Debug\Datos.csproj.CopyComplete
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Datos\obj\Debug\Datos.dll
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Datos\obj\Debug\Datos.pdb

@@ -12,36 +12,16 @@ namespace Entidades
         private int _HSTotales;
         private int _IDPlan;
 
-        public string Descripcion
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string? Descripcion
+        { get; set; }
 
         public int HSSemanales
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        { get; set; }
 
         public int HSTotales
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        { get; set; }
 
         public int IDPlan
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        { get; set; }
     }
 }
