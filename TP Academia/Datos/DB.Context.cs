@@ -15,6 +15,8 @@ namespace Datos
     
     public partial class AcademiaEntities : DbContext
     {
+        public object Especialidades;
+
         public AcademiaEntities()
             : base("name=AcademiaEntities")
         {

@@ -10,15 +10,9 @@ using System.Windows.Forms;
 
 namespace UI_Desktop
 {
-    public partial class Form2 : Form
-    {
-        public enum ModoForm
-        {
-            Baja = 0, Alta = 1, Modificacion = 2, Consulta = 3
-        }
-
-        public ModoForm modo;
-        public Form2()
+    public partial class MenuPrincipal : Form
+    {     
+        public MenuPrincipal()
         {
             InitializeComponent();
         }
@@ -29,9 +23,15 @@ namespace UI_Desktop
             Especialidades.Show();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void MenuPrincipal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void planesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Planes planes = new Planes();
+            planes.Show();
         }
     }
 }

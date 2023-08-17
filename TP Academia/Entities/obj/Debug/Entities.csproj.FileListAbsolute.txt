@@ -1,0 +1,6 @@
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Entities\obj\Debug\Entities.csproj.AssemblyReference.cache
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Entities\bin\Debug\Entities.dll
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Entities\bin\Debug\Entities.pdb
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Entities\obj\Debug\Entities.dll
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Entities\obj\Debug\Entities.pdb

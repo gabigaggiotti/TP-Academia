@@ -39,11 +39,12 @@
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.especialidadesTableAdapter = new UI_Desktop.AcademiaDataSetTableAdapters.especialidadesTableAdapter();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.lbl_desc = new System.Windows.Forms.Label();
             this.txtIdEspecialidad = new System.Windows.Forms.TextBox();
             this.txtDescEspecialidad = new System.Windows.Forms.TextBox();
-            this.btnConsultar = new System.Windows.Forms.Button();
+            this.btn_consultar = new System.Windows.Forms.Button();
+            this.btn_aceptar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.especialidadesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.academiaDataSet)).BeginInit();
@@ -119,6 +120,7 @@
             this.btn_eliminar.TabIndex = 9;
             this.btn_eliminar.Text = "ELIMINAR";
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_modificar
             // 
@@ -128,31 +130,33 @@
             this.btn_modificar.TabIndex = 10;
             this.btn_modificar.Text = "MODIFICAR";
             this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // especialidadesTableAdapter
             // 
             this.especialidadesTableAdapter.ClearBeforeFill = true;
             // 
-            // label2
+            // lbl_id
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 16);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "ID Especialidad:";
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Location = new System.Drawing.Point(9, 120);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(104, 16);
+            this.lbl_id.TabIndex = 14;
+            this.lbl_id.Text = "Id Especialidad:";
             // 
-            // label3
+            // lbl_desc
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 158);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 16);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Descripcion:";
+            this.lbl_desc.AutoSize = true;
+            this.lbl_desc.Location = new System.Drawing.Point(9, 158);
+            this.lbl_desc.Name = "lbl_desc";
+            this.lbl_desc.Size = new System.Drawing.Size(82, 16);
+            this.lbl_desc.TabIndex = 15;
+            this.lbl_desc.Text = "Descripcion:";
             // 
             // txtIdEspecialidad
             // 
+            this.txtIdEspecialidad.Enabled = false;
             this.txtIdEspecialidad.Location = new System.Drawing.Point(121, 120);
             this.txtIdEspecialidad.Name = "txtIdEspecialidad";
             this.txtIdEspecialidad.Size = new System.Drawing.Size(199, 22);
@@ -160,31 +164,43 @@
             // 
             // txtDescEspecialidad
             // 
+            this.txtDescEspecialidad.Enabled = false;
             this.txtDescEspecialidad.Location = new System.Drawing.Point(121, 155);
             this.txtDescEspecialidad.Name = "txtDescEspecialidad";
             this.txtDescEspecialidad.Size = new System.Drawing.Size(199, 22);
             this.txtDescEspecialidad.TabIndex = 17;
             // 
-            // btnConsultar
+            // btn_consultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(628, 49);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(160, 40);
-            this.btnConsultar.TabIndex = 18;
-            this.btnConsultar.Text = "CONSULTAR";
-            this.btnConsultar.UseVisualStyleBackColor = true;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            this.btn_consultar.Location = new System.Drawing.Point(628, 49);
+            this.btn_consultar.Name = "btn_consultar";
+            this.btn_consultar.Size = new System.Drawing.Size(160, 40);
+            this.btn_consultar.TabIndex = 18;
+            this.btn_consultar.Text = "CONSULTAR";
+            this.btn_consultar.UseVisualStyleBackColor = true;
+            this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click_1);
+            // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.Location = new System.Drawing.Point(245, 197);
+            this.btn_aceptar.Name = "btn_aceptar";
+            this.btn_aceptar.Size = new System.Drawing.Size(75, 23);
+            this.btn_aceptar.TabIndex = 19;
+            this.btn_aceptar.Text = "Aceptar";
+            this.btn_aceptar.UseVisualStyleBackColor = true;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // Especialidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnConsultar);
+            this.Controls.Add(this.btn_aceptar);
+            this.Controls.Add(this.btn_consultar);
             this.Controls.Add(this.txtDescEspecialidad);
             this.Controls.Add(this.txtIdEspecialidad);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_desc);
+            this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.dataGridViewEsp);
             this.Controls.Add(this.btn_crear);
             this.Controls.Add(this.btn_modificar);
@@ -212,10 +228,11 @@
         private AcademiaDataSetTableAdapters.especialidadesTableAdapter especialidadesTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEspecialidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descEspecialidadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_id;
+        private System.Windows.Forms.Label lbl_desc;
         private System.Windows.Forms.TextBox txtIdEspecialidad;
         private System.Windows.Forms.TextBox txtDescEspecialidad;
-        private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.Button btn_consultar;
+        private System.Windows.Forms.Button btn_aceptar;
     }
 }

@@ -4,7 +4,6 @@
 \\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\UI Desktop\obj\Debug\UI Desktop.csproj.AssemblyReference.cache
 \\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\UI Desktop\obj\Debug\UI Desktop.csproj.SuggestedBindingRedirects.cache
 \\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\UI Desktop\obj\Debug\UI_Desktop.Especialidades.resources
-\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\UI Desktop\obj\Debug\UI_Desktop.Form2.resources
 \\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\UI Desktop\obj\Debug\UI_Desktop.Properties.Resources.resources
 \\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\UI Desktop\obj\Debug\UI Desktop.csproj.GenerateResource.cache
 \\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\UI Desktop\obj\Debug\UI Desktop.csproj.CoreCompileInputs.cache
@@ -22,3 +21,6 @@
 \\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\UI Desktop\bin\Debug\EntityFramework.xml
 \\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\UI Desktop\bin\Debug\EntityFramework.SqlServer.xml
 \\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\UI Desktop\obj\Debug\UI Desktop.csproj.CopyComplete
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\UI Desktop\bin\Debug\Entities.dll
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\UI Desktop\bin\Debug\Entities.pdb
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\UI Desktop\obj\Debug\UI_Desktop.MenuPrincipal.resources

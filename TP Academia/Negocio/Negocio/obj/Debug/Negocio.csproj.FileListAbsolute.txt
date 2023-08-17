@@ -13,3 +13,5 @@
 \\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 \\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\obj\Debug\Negocio.dll
 \\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\obj\Debug\Negocio.pdb
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\bin\Debug\Entities.dll
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Negocio\Negocio\bin\Debug\Entities.pdb

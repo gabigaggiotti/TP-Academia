@@ -10,3 +10,5 @@
 \\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Entidades\obj\Debug\net6.0\refint\Entidades.dll
 \\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Entidades\obj\Debug\net6.0\Entidades.pdb
 \\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Entidades\obj\Debug\net6.0\ref\Entidades.dll
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Entidades\bin\Debug\net6.0\Entidades.runtimeconfig.json
+\\wsl.localhost\Ubuntu\home\tomaslardizabal\tp_academia\TP-Academia\TP Academia\Entidades\obj\Debug\net6.0\Entidades.genruntimeconfig.cache

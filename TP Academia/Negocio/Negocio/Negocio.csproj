@@ -59,6 +59,10 @@
       <Project>{1a708539-339d-4f66-8616-8308c9e0fe5a}</Project>
       <Name>Datos</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Entities\Entities.csproj">
+      <Project>{03191a7a-d292-4f24-b97d-68e4de86bc08}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -9,16 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consola", "Consola\Consola.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desktop", "Desktop\Desktop.csproj", "{2D8E3853-C91A-49B9-A0AF-DD7AB3714040}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{C3DDA196-27BB-41D1-B06F-C110F8206005}"
-	ProjectSection(SolutionItems) = preProject
-		Planes.cs = Planes.cs
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "inutilizables", "inutilizables", "{C3DDA196-27BB-41D1-B06F-C110F8206005}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI Desktop", "UI Desktop\UI Desktop.csproj", "{3BDC7893-208B-405C-BE6E-533AA8B1237E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{1A708539-339D-4F66-8616-8308C9E0FE5A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio\Negocio.csproj", "{95AB932A-6FEB-41E8-A681-54BC7E8C9591}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{03191A7A-D292-4F24-B97D-68E4DE86BC08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,9 +49,18 @@ Global
 		{95AB932A-6FEB-41E8-A681-54BC7E8C9591}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95AB932A-6FEB-41E8-A681-54BC7E8C9591}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95AB932A-6FEB-41E8-A681-54BC7E8C9591}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03191A7A-D292-4F24-B97D-68E4DE86BC08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03191A7A-D292-4F24-B97D-68E4DE86BC08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03191A7A-D292-4F24-B97D-68E4DE86BC08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03191A7A-D292-4F24-B97D-68E4DE86BC08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{621C4712-3CDE-4A87-8804-025C50AD0CED} = {C3DDA196-27BB-41D1-B06F-C110F8206005}
+		{FCE12120-2F73-46B9-8460-A0E9F3C4AE59} = {C3DDA196-27BB-41D1-B06F-C110F8206005}
+		{2D8E3853-C91A-49B9-A0AF-DD7AB3714040} = {C3DDA196-27BB-41D1-B06F-C110F8206005}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5FF4C978-86E1-45DE-81E8-BAB60949C671}
