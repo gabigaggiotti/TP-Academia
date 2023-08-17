@@ -29,6 +29,12 @@ class Program
 
             string opcion = Console.ReadLine();
 
+            //SALIR
+            if (opcion == "0")
+            {
+                salir = true;
+            }
+
             //ALTA DE UN PLAN
             if (opcion == "1")
             {
