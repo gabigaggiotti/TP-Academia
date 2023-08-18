@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "\\\\wsl.localhost\\Ubuntu\\home\\tomaslardizabal\\tp_academia\\TP-Academia\\TP Academia\\Consola\\Consola.csproj": {}
+    "C:\\Users\\ALUMNO\\Source\\Repos\\gabigaggiotti\\TP-Academia\\TP Academia\\Consola\\Consola.csproj": {}
   },
   "projects": {
-    "\\\\wsl.localhost\\Ubuntu\\home\\tomaslardizabal\\tp_academia\\TP-Academia\\TP Academia\\Consola\\Consola.csproj": {
+    "C:\\Users\\ALUMNO\\Source\\Repos\\gabigaggiotti\\TP-Academia\\TP Academia\\Consola\\Consola.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\wsl.localhost\\Ubuntu\\home\\tomaslardizabal\\tp_academia\\TP-Academia\\TP Academia\\Consola\\Consola.csproj",
+        "projectUniqueName": "C:\\Users\\ALUMNO\\Source\\Repos\\gabigaggiotti\\TP-Academia\\TP Academia\\Consola\\Consola.csproj",
         "projectName": "Consola",
-        "projectPath": "\\\\wsl.localhost\\Ubuntu\\home\\tomaslardizabal\\tp_academia\\TP-Academia\\TP Academia\\Consola\\Consola.csproj",
-        "packagesPath": "C:\\Users\\potyl\\.nuget\\packages\\",
-        "outputPath": "\\\\wsl.localhost\\Ubuntu\\home\\tomaslardizabal\\tp_academia\\TP-Academia\\TP Academia\\Consola\\obj\\",
+        "projectPath": "C:\\Users\\ALUMNO\\Source\\Repos\\gabigaggiotti\\TP-Academia\\TP Academia\\Consola\\Consola.csproj",
+        "packagesPath": "C:\\Users\\ALUMNO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ALUMNO\\Source\\Repos\\gabigaggiotti\\TP-Academia\\TP Academia\\Consola\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\potyl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ALUMNO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "\\\\wsl.localhost\\Ubuntu\\home\\tomaslardizabal\\tp_academia\\TP-Academia\\TP Academia\\Entidades\\Entidades.csproj": {
-                "projectPath": "\\\\wsl.localhost\\Ubuntu\\home\\tomaslardizabal\\tp_academia\\TP-Academia\\TP Academia\\Entidades\\Entidades.csproj"
+              "C:\\Users\\ALUMNO\\Source\\Repos\\gabigaggiotti\\TP-Academia\\TP Academia\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\ALUMNO\\Source\\Repos\\gabigaggiotti\\TP-Academia\\TP Academia\\Entidades\\Entidades.csproj"
               }
             }
           }
@@ -59,21 +64,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "\\\\wsl.localhost\\Ubuntu\\home\\tomaslardizabal\\tp_academia\\TP-Academia\\TP Academia\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\ALUMNO\\Source\\Repos\\gabigaggiotti\\TP-Academia\\TP Academia\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\wsl.localhost\\Ubuntu\\home\\tomaslardizabal\\tp_academia\\TP-Academia\\TP Academia\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\ALUMNO\\Source\\Repos\\gabigaggiotti\\TP-Academia\\TP Academia\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "\\\\wsl.localhost\\Ubuntu\\home\\tomaslardizabal\\tp_academia\\TP-Academia\\TP Academia\\Entidades\\Entidades.csproj",
-        "packagesPath": "C:\\Users\\potyl\\.nuget\\packages\\",
-        "outputPath": "\\\\wsl.localhost\\Ubuntu\\home\\tomaslardizabal\\tp_academia\\TP-Academia\\TP Academia\\Entidades\\obj\\",
+        "projectPath": "C:\\Users\\ALUMNO\\Source\\Repos\\gabigaggiotti\\TP-Academia\\TP Academia\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\ALUMNO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ALUMNO\\Source\\Repos\\gabigaggiotti\\TP-Academia\\TP Academia\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\potyl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ALUMNO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,6 +90,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -114,7 +124,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

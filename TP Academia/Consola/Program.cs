@@ -30,7 +30,7 @@ class Program
             string opcion = Console.ReadLine();
 
             //SALIR
-            if (opcion == "0")
+            if (opcion == "15")
             {
                 salir = true;
             }
