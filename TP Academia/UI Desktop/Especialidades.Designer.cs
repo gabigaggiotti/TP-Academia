@@ -82,8 +82,7 @@
             this.dataGridViewEsp.RowHeadersWidth = 51;
             this.dataGridViewEsp.RowTemplate.Height = 24;
             this.dataGridViewEsp.Size = new System.Drawing.Size(403, 343);
-            this.dataGridViewEsp.TabIndex = 13;
-            this.dataGridViewEsp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridViewEsp.TabIndex = 13;            
             // 
             // idEspecialidadDataGridViewTextBoxColumn
             // 

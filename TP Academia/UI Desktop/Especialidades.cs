@@ -78,12 +78,7 @@ namespace UI_Desktop
             //this.especialidadesTableAdapter.Fill(this.academiaDataSet.especialidades);
             
 
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }        
+        }       
         private void HabilitarCamposCrear()
         {
             txtDescEspecialidad.Enabled = true;

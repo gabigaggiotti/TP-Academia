@@ -48,9 +48,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_especialidad = new System.Windows.Forms.Label();
             this.txtIdEspecialidad = new System.Windows.Forms.TextBox();
+            this.dataGridViewEsp = new System.Windows.Forms.DataGridView();
+            this.idEspecialidadDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descEspecialidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.especialidadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.planesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.especialidadesTableAdapter = new UI_Desktop.AcademiaDataSetTableAdapters.especialidadesTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPlanes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.academiaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEsp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.especialidadesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewPlanes
@@ -130,6 +140,7 @@
             this.btnModificar.TabIndex = 14;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
             // 
             // btnEliminar
             // 
@@ -139,6 +150,7 @@
             this.btnEliminar.TabIndex = 13;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // btnConsultar
             // 
@@ -162,6 +174,7 @@
             this.btnAceptar.TabIndex = 24;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
             // 
             // txtDescPlan
             // 
@@ -178,6 +191,7 @@
             this.txtIdPlan.Name = "txtIdPlan";
             this.txtIdPlan.Size = new System.Drawing.Size(199, 22);
             this.txtIdPlan.TabIndex = 22;
+            this.txtIdPlan.TextChanged += new System.EventHandler(this.txtIdPlan_TextChanged);
             // 
             // label3
             // 
@@ -214,11 +228,69 @@
             this.txtIdEspecialidad.Size = new System.Drawing.Size(199, 22);
             this.txtIdEspecialidad.TabIndex = 26;
             // 
+            // dataGridViewEsp
+            // 
+            this.dataGridViewEsp.AutoGenerateColumns = false;
+            this.dataGridViewEsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEsp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idEspecialidadDataGridViewTextBoxColumn1,
+            this.descEspecialidadDataGridViewTextBoxColumn});
+            this.dataGridViewEsp.DataSource = this.especialidadesBindingSource;
+            this.dataGridViewEsp.Location = new System.Drawing.Point(12, 267);
+            this.dataGridViewEsp.Name = "dataGridViewEsp";
+            this.dataGridViewEsp.RowHeadersWidth = 51;
+            this.dataGridViewEsp.RowTemplate.Height = 24;
+            this.dataGridViewEsp.Size = new System.Drawing.Size(295, 171);
+            this.dataGridViewEsp.TabIndex = 27;
+            this.dataGridViewEsp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEsp_CellContentClick);
+            // 
+            // idEspecialidadDataGridViewTextBoxColumn1
+            // 
+            this.idEspecialidadDataGridViewTextBoxColumn1.DataPropertyName = "idEspecialidad";
+            this.idEspecialidadDataGridViewTextBoxColumn1.HeaderText = "idEspecialidad";
+            this.idEspecialidadDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.idEspecialidadDataGridViewTextBoxColumn1.Name = "idEspecialidadDataGridViewTextBoxColumn1";
+            this.idEspecialidadDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idEspecialidadDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // descEspecialidadDataGridViewTextBoxColumn
+            // 
+            this.descEspecialidadDataGridViewTextBoxColumn.DataPropertyName = "descEspecialidad";
+            this.descEspecialidadDataGridViewTextBoxColumn.HeaderText = "descEspecialidad";
+            this.descEspecialidadDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descEspecialidadDataGridViewTextBoxColumn.Name = "descEspecialidadDataGridViewTextBoxColumn";
+            this.descEspecialidadDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // especialidadesBindingSource
+            // 
+            this.especialidadesBindingSource.DataMember = "especialidades";
+            this.especialidadesBindingSource.DataSource = this.academiaDataSet;
+            // 
+            // planesBindingSource1
+            // 
+            this.planesBindingSource1.DataMember = "planes";
+            this.planesBindingSource1.DataSource = this.academiaDataSet;
+            // 
+            // especialidadesTableAdapter
+            // 
+            this.especialidadesTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 245);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(178, 16);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Especialidades disponibles:";
+            // 
             // Planes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridViewEsp);
             this.Controls.Add(this.txtIdEspecialidad);
             this.Controls.Add(this.lbl_especialidad);
             this.Controls.Add(this.btnAceptar);
@@ -238,6 +310,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPlanes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.academiaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEsp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.especialidadesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.planesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,5 +339,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_especialidad;
         private System.Windows.Forms.TextBox txtIdEspecialidad;
+        private System.Windows.Forms.DataGridView dataGridViewEsp;
+        private System.Windows.Forms.BindingSource planesBindingSource1;
+        private System.Windows.Forms.BindingSource especialidadesBindingSource;
+        private AcademiaDataSetTableAdapters.especialidadesTableAdapter especialidadesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEspecialidadDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descEspecialidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
     }
 }
